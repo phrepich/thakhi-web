@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --ink: #10202c;
+  --ocean: #071b2a;
+  --deep-blue: #123447;
+  --copper: #b9783f;
+  --sun: #e6b36f;
+  --sand: #f7efe2;
+  --paper: #fffaf2;
+  --line: #dccab2;
+}
+
+@theme inline {
+  --font-sans: "Manrope", "Aptos", "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(185, 120, 63, 0.2), transparent 32%),
+      linear-gradient(135deg, var(--sand) 0%, var(--paper) 52%, #d9edf4 100%);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    transition:
+      color 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  ::selection {
+    background: rgba(230, 179, 111, 0.35);
+  }
+}

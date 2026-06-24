@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const navItems = [
   { href: "#que-es", label: "Qué es" },
+  { href: "#plataforma", label: "Plataforma" },
   { href: "#lineas", label: "Líneas" },
   { href: "#capital-humano", label: "Capital humano" },
   { href: "#equipo", label: "Equipo" },
@@ -26,6 +27,31 @@ const workLines = [
   {
     title: "Marketing Territorial",
     description: "Posicionamiento de destinos, campañas locales, contenidos, activaciones y comunicación de marca.",
+  },
+];
+
+const platformFlow = ["Personas", "Redes", "Oportunidades", "Proyectos", "Experiencias", "Desarrollo Territorial"];
+
+const platformCards = [
+  {
+    title: "Personas",
+    description: "Capital humano capaz de abrir conversaciones, generar confianza y leer oportunidades locales.",
+  },
+  {
+    title: "Redes",
+    description: "Vínculos entre empresas, instituciones, comunidades, emprendedores y operadores del territorio.",
+  },
+  {
+    title: "Oportunidades",
+    description: "Ideas, necesidades y espacios de colaboración que pueden transformarse en valor compartido.",
+  },
+  {
+    title: "Experiencias",
+    description: "Activaciones, rutas, eventos y programas que conectan marca, cultura y comunidad.",
+  },
+  {
+    title: "Impacto Territorial",
+    description: "Resultados visibles para el desarrollo local, la identidad regional y nuevas economías colaborativas.",
   },
 ];
 
@@ -264,6 +290,12 @@ export default function HomePage() {
               <Link href="#lineas" className="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur hover:bg-white/16">
                 Ver líneas de trabajo
               </Link>
+              <Link href="/encuesta" className="rounded-full border border-[#e6b36f]/60 bg-[#e6b36f]/14 px-7 py-4 text-sm font-bold text-[#f0c98c] backdrop-blur hover:bg-[#e6b36f]/22">
+                Completar Encuesta
+              </Link>
+              <Link href="/agentes-instagram" className="rounded-full border border-white/20 bg-white/8 px-7 py-4 text-sm font-bold text-white/88 backdrop-blur hover:bg-white/14">
+                Agentes de Instagram
+              </Link>
             </div>
           </div>
         </div>
@@ -279,6 +311,49 @@ export default function HomePage() {
               producción de eventos, cultura local y desarrollo comercial. Nuestro principal activo es el capital humano:
               personas capaces de abrir puertas, conectar redes y transformar ideas en experiencias reales.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="plataforma" className="bg-[#10202c] px-5 py-20 text-white md:px-8 md:py-28">
+        <div className="mx-auto w-full max-w-7xl space-y-12">
+          <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+            <SectionIntro
+              eyebrow="Qué es una plataforma"
+              title="¿Qué significa ser una plataforma?"
+              description="THAKHI no se limita a prestar servicios. Conecta personas, organizaciones, empresas, instituciones y oportunidades para transformar capacidades en experiencias, proyectos y desarrollo territorial."
+              light
+            />
+            <div className="rounded-[32px] border border-white/12 bg-white/8 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.2)] backdrop-blur md:p-10">
+              <p className="text-xl font-semibold leading-9 text-white/88 md:text-2xl">
+                Una plataforma genera valor mediante la articulación de redes y la creación de vínculos entre actores
+                que pueden colaborar para construir nuevas oportunidades.
+              </p>
+              <div className="mt-8 grid gap-2">
+                {platformFlow.map((item, index) => (
+                  <div key={item} className="grid justify-items-center gap-2">
+                    <div className="flex min-h-12 w-full items-center justify-center rounded-2xl border border-white/12 bg-white/8 px-5 text-center text-sm font-bold uppercase tracking-[0.16em] text-white/88">
+                      {item}
+                    </div>
+                    {index < platformFlow.length - 1 ? (
+                      <span className="text-2xl font-semibold text-[#f0c98c]" aria-hidden="true">
+                        ↓
+                      </span>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+            {platformCards.map((card, index) => (
+              <article key={card.title} className="rounded-[28px] border border-white/12 bg-white/8 p-6 backdrop-blur">
+                <p className="text-sm font-bold tracking-[0.24em] text-[#f0c98c]">0{index + 1}</p>
+                <h3 className="mt-6 text-xl font-semibold tracking-[-0.03em] text-white">{card.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/68">{card.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -561,9 +636,17 @@ export default function HomePage() {
               Tarapacá, THAKHI puede ayudarte a conectar con el territorio.
             </p>
           </div>
-          <Link href="mailto:contacto@thakhi.cl" className="inline-flex shrink-0 justify-center rounded-full bg-[#e6b36f] px-8 py-4 text-sm font-bold text-[#071b2a] shadow-[0_18px_48px_rgba(230,179,111,0.28)] hover:bg-[#f0c98c]">
-            Contactar a THAKHI
-          </Link>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
+            <Link href="mailto:contacto@thakhi.cl" className="inline-flex justify-center rounded-full bg-[#e6b36f] px-8 py-4 text-sm font-bold text-[#071b2a] shadow-[0_18px_48px_rgba(230,179,111,0.28)] hover:bg-[#f0c98c]">
+              Contactar a THAKHI
+            </Link>
+            <Link href="/encuesta" className="inline-flex justify-center rounded-full border border-white/16 bg-white/8 px-8 py-4 text-sm font-bold text-white hover:bg-white/14">
+              Completar Encuesta
+            </Link>
+            <Link href="/agentes-instagram" className="inline-flex justify-center rounded-full border border-[#e6b36f]/40 bg-[#e6b36f]/12 px-8 py-4 text-sm font-bold text-[#f0c98c] hover:bg-[#e6b36f]/18">
+              Agentes de Instagram
+            </Link>
+          </div>
         </div>
       </section>
     </main>

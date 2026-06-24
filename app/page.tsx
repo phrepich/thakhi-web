@@ -4,8 +4,8 @@ import Link from "next/link";
 const navItems = [
   { href: "#que-es", label: "Qué es" },
   { href: "#lineas", label: "Líneas" },
+  { href: "#capital-humano", label: "Capital humano" },
   { href: "#equipo", label: "Equipo" },
-  { href: "#responsabilidades", label: "Responsabilidades" },
   { href: "#modelo", label: "Modelo" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -27,6 +27,36 @@ const workLines = [
     title: "Marketing Territorial",
     description: "Posicionamiento de destinos, campañas locales, contenidos, activaciones y comunicación de marca.",
   },
+];
+
+const humanCapitalCards = [
+  {
+    title: "Identificación de Capacidades",
+    points: ["Experiencia", "Habilidades", "Redes de contacto", "Conocimiento territorial"],
+  },
+  {
+    title: "Desarrollo de Liderazgo",
+    points: ["Comunicación", "Negociación", "Organización", "Trabajo colaborativo"],
+  },
+  {
+    title: "Marca Personal",
+    points: ["Redes sociales", "Creación de contenido", "Posicionamiento profesional", "Embajadores THAKHI"],
+  },
+  {
+    title: "Generación de Oportunidades",
+    points: ["Alianzas", "Auspicios", "Nuevos negocios", "Desarrollo territorial"],
+  },
+];
+
+const growthFlow = ["Personas", "Redes", "Oportunidades", "Experiencias", "Impacto Territorial"];
+
+const internalProgramIndicators = [
+  "Contactos generados",
+  "Alianzas construidas",
+  "Participación en actividades",
+  "Alcance digital",
+  "Oportunidades detectadas",
+  "Proyectos impulsados",
 ];
 
 const team = [
@@ -269,6 +299,122 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="capital-humano" className="relative bg-[#f7efe2] px-5 py-20 md:px-8 md:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.28),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(18,52,71,0.16),transparent_34%)]" />
+        <div className="relative mx-auto w-full max-w-7xl space-y-14">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <SectionIntro
+              eyebrow="Capital Humano y Desarrollo de Talento"
+              title="Nuestro principal activo son las personas."
+              description="THAKHI nace con la convicción de que el desarrollo territorial se construye desde las personas, sus capacidades, sus redes de contacto y su capacidad de generar confianza."
+            />
+            <div className="rounded-[32px] border border-[#d8c8b2] bg-white/78 p-8 shadow-[0_28px_90px_rgba(61,44,29,0.12)] backdrop-blur md:p-10">
+              <p className="text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#10202c] md:text-3xl">
+                Antes que infraestructura o tecnología, nuestro principal capital es el talento humano.
+              </p>
+              <p className="mt-5 text-base leading-8 text-[#5f6b70]">
+                Ese talento permite abrir conversaciones, activar redes, leer el territorio y transformar una idea en una
+                experiencia con valor para empresas, instituciones, comunidades y visitantes.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {humanCapitalCards.map((card, index) => (
+              <article
+                key={card.title}
+                className="group rounded-[28px] border border-[#dbc8ae] bg-[#fffaf2] p-7 shadow-[0_22px_70px_rgba(61,44,29,0.08)] transition duration-300 hover:-translate-y-1 hover:border-[#c4824a] hover:bg-white"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#10202c] text-sm font-bold text-[#f0c98c]">
+                  0{index + 1}
+                </div>
+                <h3 className="mt-7 text-xl font-semibold tracking-[-0.03em] text-[#10202c]">{card.title}</h3>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-[#5f6b70]">
+                  {card.points.map((point) => (
+                    <li key={point} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c4824a]" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <section className="rounded-[32px] bg-[#10202c] p-8 text-white shadow-[0_30px_100px_rgba(16,32,44,0.24)] md:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Modelo de Crecimiento</p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-[-0.04em] md:text-4xl">
+                Del talento individual al impacto territorial.
+              </h3>
+              <div className="mt-8 grid gap-2">
+                {growthFlow.map((item, index) => (
+                  <div key={item} className="grid justify-items-center gap-2">
+                    <div className="flex min-h-12 w-full items-center justify-center rounded-2xl border border-white/12 bg-white/8 px-5 text-center text-sm font-bold uppercase tracking-[0.16em] text-white/88">
+                      {item}
+                    </div>
+                    {index < growthFlow.length - 1 ? (
+                      <span className="text-2xl font-semibold text-[#f0c98c]" aria-hidden="true">
+                        ↓
+                      </span>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-[32px] border border-[#d8c8b2] bg-white p-8 shadow-[0_28px_90px_rgba(61,44,29,0.1)] md:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#b9783f]">Programa de Desarrollo Interno</p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-[#10202c] md:text-4xl">
+                Indicadores para formar equipos visibles, conectados y medibles.
+              </h3>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {internalProgramIndicators.map((indicator) => (
+                  <div key={indicator} className="rounded-2xl border border-[#eadcc9] bg-[#fffaf2] px-5 py-4 text-sm font-semibold text-[#5f6b70]">
+                    {indicator}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <section className="grid gap-8 overflow-hidden rounded-[32px] border border-[#d8c8b2] bg-white shadow-[0_30px_100px_rgba(61,44,29,0.12)] lg:grid-cols-[0.82fr_1.18fr]">
+            <div className="bg-[linear-gradient(145deg,#8f4f2c_0%,#123447_78%)] p-8 text-white md:p-10">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Diagnóstico de Capacidades</p>
+              <h3 className="mt-5 text-3xl font-semibold tracking-[-0.04em] md:text-5xl">
+                Una herramienta para construir equipos de alto impacto.
+              </h3>
+              <p className="mt-6 text-base leading-8 text-white/74">
+                Esta herramienta permitirá identificar fortalezas, oportunidades y áreas de desarrollo para construir
+                equipos de alto impacto.
+              </p>
+            </div>
+            <form className="grid gap-5 p-6 md:grid-cols-2 md:p-8" aria-label="Formulario visual de diagnóstico de capacidades">
+              {[
+                "Nombre",
+                "Experiencia principal",
+                "Sectores donde posee contactos",
+                "Áreas de interés",
+                "Habilidades destacadas",
+                "Objetivos personales dentro de THAKHI",
+              ].map((label) => (
+                <label key={label} className={label.includes("Objetivos") ? "md:col-span-2" : ""}>
+                  <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#b9783f]">{label}</span>
+                  <span className="mt-2 block rounded-2xl border border-[#dbc8ae] bg-[#fffaf2] px-4 py-4 text-sm text-[#8c969a]">
+                    {label.includes("Objetivos") ? "Describe metas, intereses y contribución esperada" : "Completar información"}
+                  </span>
+                </label>
+              ))}
+              <div className="md:col-span-2">
+                <span className="inline-flex rounded-full bg-[#10202c] px-6 py-3 text-sm font-bold text-white">
+                  Interfaz no funcional para evaluación interna
+                </span>
+              </div>
+            </form>
+          </section>
         </div>
       </section>
 

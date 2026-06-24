@@ -103,20 +103,13 @@ export default function SurveyPage() {
 
       <section className="px-5 py-16 md:px-8 md:py-24">
         <form
-          name="encuesta-thakhi"
           method="POST"
-          action="/encuesta/gracias"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          action="https://formsubmit.co/phrepich@gmail.com"
           className="mx-auto grid w-full max-w-5xl gap-8"
         >
-          <input type="hidden" name="form-name" value="encuesta-thakhi" />
-          <input type="hidden" name="recipient" value="phrepich@gmail.com" />
-          <p className="hidden">
-            <label>
-              No completar: <input name="bot-field" />
-            </label>
-          </p>
+          <input type="hidden" name="_subject" value="Nueva encuesta THAKHI" />
+          <input type="hidden" name="_next" value="https://thakhi-tarapaca.netlify.app/encuesta/gracias" />
+          <input type="hidden" name="_captcha" value="false" />
 
           <section className="rounded-[32px] border border-[#d8c8b2] bg-white p-6 shadow-[0_28px_90px_rgba(61,44,29,0.1)] md:p-8">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#b9783f]">Datos generales</p>

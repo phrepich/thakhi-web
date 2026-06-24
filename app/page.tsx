@@ -6,7 +6,7 @@ const navItems = [
   { href: "#plataforma", label: "Plataforma" },
   { href: "#lineas", label: "Líneas" },
   { href: "#capital-humano", label: "Capital humano" },
-  { href: "#equipo", label: "Equipo" },
+  { href: "#responsabilidades", label: "Responsabilidades" },
   { href: "#modelo", label: "Modelo" },
   { href: "#contacto", label: "Contacto" },
 ];
@@ -85,29 +85,6 @@ const internalProgramIndicators = [
   "Proyectos impulsados",
 ];
 
-const team = [
-  {
-    name: "Pablo Hrepich",
-    role: "Dirección General y Desarrollo Estratégico.",
-    description: "Responsable de visión, alianzas, nuevos negocios y expansión.",
-  },
-  {
-    name: "Alejandra",
-    role: "Representante Ejecutiva en Iquique.",
-    description: "Dirección comercial, marketing, clientes y coordinación regional.",
-  },
-  {
-    name: "Virna",
-    role: "Vinculación y Desarrollo de Eventos.",
-    description: "Relaciones públicas, auspicios, patrocinadores y generación de oportunidades.",
-  },
-  {
-    name: "Lucas",
-    role: "Producción General y Experiencias.",
-    description: "Operación de eventos, atención turística, logística y experiencia de clientes.",
-  },
-];
-
 const steps = [
   "Escuchamos la oportunidad.",
   "Conectamos actores clave.",
@@ -117,93 +94,36 @@ const steps = [
 
 const responsibilities = [
   {
+    title: "Dirección Estratégica",
+    tasks: ["Visión del proyecto", "Modelo de negocio", "Alianzas clave", "Priorización de oportunidades", "Control del crecimiento"],
+  },
+  {
     title: "Desarrollo Comercial",
-    objective: "Generar oportunidades de negocio.",
-    tasks: [
-      "Prospectar clientes.",
-      "Gestionar reuniones.",
-      "Presentar servicios.",
-      "Elaborar propuestas.",
-      "Realizar seguimiento comercial.",
-      "Cerrar acuerdos.",
-      "Mantener CRM actualizado.",
-    ],
-    indicators: ["Contactos generados.", "Reuniones realizadas.", "Propuestas enviadas.", "Negocios cerrados."],
+    tasks: ["Prospección de clientes", "Reuniones comerciales", "Propuestas", "Seguimiento", "Cierre de oportunidades"],
   },
   {
     title: "Relaciones Públicas y Vinculación",
-    objective: "Construir redes y alianzas.",
-    tasks: [
-      "Gestionar relaciones institucionales.",
-      "Vincular organizaciones públicas y privadas.",
-      "Identificar aliados estratégicos.",
-      "Gestionar patrocinadores y auspiciadores.",
-      "Participar en actividades de networking.",
-      "Representar a THAKHI en actividades externas.",
-    ],
-    indicators: [
-      "Alianzas generadas.",
-      "Auspiciadores contactados.",
-      "Convenios firmados.",
-      "Actividades de vinculación realizadas.",
-    ],
+    tasks: ["Redes institucionales", "Auspiciadores", "Patrocinadores", "Comunidad", "Representación territorial"],
   },
   {
-    title: "Desarrollo Turístico",
-    objective: "Diseñar experiencias atractivas y comercializables.",
-    tasks: [
-      "Identificar atractivos turísticos.",
-      "Diseñar rutas y experiencias.",
-      "Gestionar proveedores.",
-      "Coordinar operadores locales.",
-      "Desarrollar paquetes turísticos.",
-      "Levantar oportunidades de turismo corporativo.",
-    ],
-    indicators: [
-      "Rutas desarrolladas.",
-      "Experiencias comercializadas.",
-      "Clientes atendidos.",
-      "Evaluación de satisfacción.",
-    ],
+    title: "Turismo y Experiencias",
+    tasks: ["Diseño de rutas", "Experiencias territoriales", "Atención de visitantes", "Coordinación de operadores", "Calidad del servicio"],
   },
   {
     title: "Producción de Eventos",
-    objective: "Diseñar y ejecutar actividades exitosas.",
-    tasks: [
-      "Diseñar eventos.",
-      "Gestionar espacios.",
-      "Coordinar proveedores.",
-      "Gestionar logística.",
-      "Supervisar ejecución.",
-      "Evaluar resultados.",
-    ],
-    indicators: ["Eventos realizados.", "Participantes.", "Nivel de satisfacción.", "Rentabilidad por evento."],
+    tasks: ["Diseño de eventos", "Logística", "Proveedores", "Montaje y operación", "Evaluación de resultados"],
   },
   {
     title: "Marketing y Comunicaciones",
-    objective: "Posicionar la marca y generar visibilidad.",
-    tasks: [
-      "Administrar redes sociales.",
-      "Crear contenido.",
-      "Gestionar campañas.",
-      "Mantener sitio web.",
-      "Difundir actividades.",
-      "Gestionar imagen corporativa.",
-    ],
-    indicators: ["Alcance digital.", "Seguidores.", "Consultas recibidas.", "Conversiones generadas."],
+    tasks: ["Redes sociales", "Imagen de marca", "Contenido digital", "Campañas", "Difusión territorial"],
   },
   {
-    title: "Gestión y Administración",
-    objective: "Mantener la sostenibilidad operativa.",
-    tasks: [
-      "Control financiero.",
-      "Presupuestos.",
-      "Facturación.",
-      "Control documental.",
-      "Seguimiento de indicadores.",
-      "Elaboración de reportes.",
-    ],
-    indicators: ["Flujo de caja.", "Facturación mensual.", "Gastos operacionales.", "Cumplimiento de metas."],
+    title: "Gestión Administrativa y Financiera",
+    tasks: ["Presupuestos", "Control de ingresos y gastos", "Documentación", "Facturación", "Reportes de gestión"],
+  },
+  {
+    title: "Tecnología y Datos",
+    tasks: ["CRM", "Encuestas", "Dashboard", "Base de contactos", "Automatización de seguimiento"],
   },
 ];
 
@@ -493,101 +413,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="equipo" className="bg-[#123447] px-5 py-20 text-white md:px-8 md:py-28">
-        <div className="mx-auto w-full max-w-7xl space-y-12">
+      <section id="responsabilidades" className="relative bg-[#071b2a] px-5 py-20 text-white md:px-8 md:py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.2),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(25,164,178,0.16),transparent_32%),linear-gradient(135deg,#071b2a_0%,#10202c_48%,#123447_100%)]" />
+        <div className="relative mx-auto w-full max-w-7xl space-y-12">
           <SectionIntro
-            eyebrow="Equipo"
-            title="Un equipo pensado para abrir puertas, coordinar actores y cuidar la experiencia."
-            description="THAKHI pone al centro el capital humano: criterio, presencia local, relaciones y capacidad de ejecución."
+            eyebrow="Responsabilidades clave"
+            title="Responsabilidades Clave para el Desarrollo del Proyecto"
+            description="THAKHI se construye desde el capital humano, pero no desde cargos rígidos. El proyecto requiere responsabilidades claras, flexibles y colaborativas, que podrán ser asumidas y redistribuidas por el equipo según capacidades, disponibilidad y resultados."
             light
           />
+
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {team.map((person) => (
-              <article key={person.name} className="rounded-[28px] border border-white/12 bg-white/8 p-7 backdrop-blur">
-                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-full bg-[#e6b36f] text-sm font-bold tracking-[0.16em] text-[#123447]">
-                  {person.name.slice(0, 2).toUpperCase()}
-                </div>
-                <h3 className="text-2xl font-semibold tracking-[-0.03em]">{person.name}</h3>
-                <p className="mt-4 text-sm font-semibold leading-7 text-[#f0c98c]">{person.role}</p>
-                <p className="mt-3 text-sm leading-7 text-white/70">{person.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="responsabilidades" className="bg-[#fffaf2] px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto w-full max-w-7xl space-y-12">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <SectionIntro
-              eyebrow="Responsabilidades críticas"
-              title="Funciones cubiertas permanentemente para sostener el crecimiento de THAKHI."
-              description="Una misma persona puede asumir más de una función y las responsabilidades pueden redistribuirse según carga de trabajo, capacidades y resultados."
-            />
-            <div className="rounded-[24px] border border-[#d8c8b2] bg-[#f7efe2] px-6 py-5 text-sm leading-7 text-[#5f6b70] lg:max-w-sm">
-              Todas las responsabilidades pertenecen al equipo y no a una persona específica.
-            </div>
-          </div>
-
-          <div className="grid gap-5 lg:grid-cols-2">
             {responsibilities.map((area, index) => (
-              <article
-                key={area.title}
-                className="rounded-[28px] border border-[#dbc8ae] bg-white p-6 shadow-[0_22px_70px_rgba(61,44,29,0.08)] md:p-8"
-              >
-                <div className="flex items-start justify-between gap-5">
-                  <div>
-                    <p className="text-sm font-bold tracking-[0.24em] text-[#b9783f]">0{index + 1}</p>
-                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.03em] text-[#10202c]">{area.title}</h3>
-                  </div>
-                  <span className="rounded-full bg-[#f7efe2] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#8f4f2c]">
-                    Crítica
+              <article key={area.title} className="rounded-[28px] border border-white/12 bg-white/8 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.16)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-[#e6b36f]/40 hover:bg-white/10 md:p-7">
+                <div className="flex items-start justify-between gap-4">
+                  <p className="text-sm font-bold tracking-[0.24em] text-[#f0c98c]">0{index + 1}</p>
+                  <span className="rounded-full border border-[#19a4b2]/30 bg-[#19a4b2]/12 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#b7edf1]">
+                    Flexible
                   </span>
                 </div>
-                <p className="mt-5 text-base font-semibold leading-7 text-[#123447]">{area.objective}</p>
-                <div className="mt-7 grid gap-6 md:grid-cols-2">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b9783f]">Responsabilidades</p>
-                    <ul className="mt-4 space-y-2 text-sm leading-6 text-[#5f6b70]">
-                      {area.tasks.map((task) => (
-                        <li key={task} className="flex gap-2">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c4824a]" />
-                          <span>{task}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#b9783f]">Indicadores</p>
-                    <ul className="mt-4 space-y-2 text-sm leading-6 text-[#5f6b70]">
-                      {area.indicators.map((indicator) => (
-                        <li key={indicator} className="rounded-2xl border border-[#eadcc9] bg-[#fffaf2] px-4 py-2">
-                          {indicator}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="mt-6 text-xl font-semibold tracking-[-0.03em] text-white">{area.title}</h3>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-white/70">
+                  {area.tasks.map((task) => (
+                    <li key={task} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#e6b36f]" />
+                      <span>{task}</span>
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
 
-          <div className="relative overflow-hidden rounded-[32px] bg-[#10202c] p-8 text-white shadow-[0_32px_100px_rgba(16,32,44,0.24)] md:p-10">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(230,179,111,0.28),transparent_32%),linear-gradient(135deg,#10202c_0%,#123447_60%,#8f4f2c_100%)]" />
-            <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Principio de operación</p>
-                <h3 className="mt-4 text-3xl font-semibold tracking-[-0.04em] md:text-4xl">
-                  Organización flexible, colaborativa y orientada a resultados.
-                </h3>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {["Capacidades individuales.", "Disponibilidad.", "Interés.", "Resultados obtenidos."].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/12 bg-white/8 px-5 py-4 text-sm font-semibold text-white/78">
-                    {item}
-                  </div>
-                ))}
-              </div>
+          <div className="relative overflow-hidden rounded-[32px] border border-white/12 bg-white/8 p-8 shadow-[0_32px_100px_rgba(0,0,0,0.2)] backdrop-blur md:p-10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(230,179,111,0.2),transparent_30%)]" />
+            <div className="relative grid gap-6 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Principio de trabajo</p>
+              <p className="text-xl font-semibold leading-9 text-white/86 md:text-2xl">
+                Las responsabilidades no pertenecen a una persona fija. Se asignan en conjunto, se revisan
+                periódicamente y se ajustan según el avance real del proyecto.
+              </p>
             </div>
           </div>
         </div>

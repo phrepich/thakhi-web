@@ -108,7 +108,7 @@ export default function SurveyPage() {
           className="mx-auto grid w-full max-w-5xl gap-8"
         >
           <input type="hidden" name="_subject" value="Nueva encuesta THAKI · Antofagasta" />
-          <input type="hidden" name="_next" value="https://thakhi-tarapaca.netlify.app/encuesta/gracias" />
+          <input type="hidden" name="_next" value="https://thaki-eventos.netlify.app/encuesta/gracias" />
           <input type="hidden" name="_captcha" value="false" />
 
           <section className="rounded-[32px] border border-[#d8c8b2] bg-white p-6 shadow-[0_28px_90px_rgba(61,44,29,0.1)] md:p-8">

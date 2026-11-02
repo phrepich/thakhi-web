@@ -4,9 +4,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "THAKI | Plataforma territorial de proyectos y experiencias en Antofagasta",
+  title: "THAKI | Producción de eventos en Antofagasta",
   description:
-    "Plataforma de articulación territorial en Antofagasta: conecta personas, organizaciones y capacidades para desarrollar proyectos, eventos y experiencias.",
+    "Diseño y coordinación de eventos corporativos, culturales y comunitarios en Antofagasta. Concepto, producción, logística y contenidos para encuentros con identidad.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

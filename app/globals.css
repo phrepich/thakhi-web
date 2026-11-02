@@ -49,3 +49,7 @@
     background: rgba(230, 179, 111, 0.35);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -9,8 +9,6 @@ Sitio original construido con Next.js, TypeScript y Tailwind CSS.
 - `/agentes-instagram`: modelo histórico de agentes de la etapa Tarapacá.
 - `/encuesta`: diagnóstico de capacidades, con enfoque en Antofagasta.
 
-NorthAcoustics se presenta como colaborador estratégico independiente, con alcance definido para cada encargo.
-
 El documento societario utilizado para orientar el contenido está marcado como borrador; el sitio no acredita constitución ni habilitaciones regulatorias.
 
 ## Desarrollo y validación
@@ -22,4 +20,4 @@ npm run typecheck
 npm run start
 ```
 
-El proyecto de Netlify fue renombrado como `thaki-eventos`. El retorno de la encuesta utiliza la nueva dirección. La portada usa una ilustración abstracta, sin presentar eventos realizados ni clientes como experiencia de la nueva empresa. La idea de plataforma se conserva como articulación de colaboradores por proyecto. Los servicios son alcances a acordar, sin afirmar equipamiento propio ni relaciones formales con NorthAcoustics.
+El proyecto de Netlify fue renombrado como `thaki-eventos`. El retorno de la encuesta utiliza la nueva dirección. La portada usa una ilustración abstracta, sin presentar eventos realizados ni clientes como experiencia de la nueva empresa. La idea de plataforma se conserva como articulación de colaboradores por proyecto. Los servicios son alcances a acordar, sin afirmar equipamiento propio ni relaciones formales con terceros.

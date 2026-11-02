@@ -5,29 +5,18 @@ const navItems = [
   { href: "#que-es", label: "Qué es" },
   { href: "#plataforma", label: "Plataforma" },
   { href: "#lineas", label: "Líneas" },
-  { href: "#capital-humano", label: "Capital humano" },
-  { href: "#responsabilidades", label: "Responsabilidades" },
-  { href: "#modelo", label: "Modelo" },
+  { href: "#colaboracion-na", label: "Colaboración NA" },
+  { href: "/tarapaca", label: "Antecedente Tarapacá" },
   { href: "#contacto", label: "Contacto" },
 ];
 
 const workLines = [
-  {
-    title: "Turismo y Experiencias",
-    description: "Rutas, actividades, experiencias corporativas, turismo cultural y programas personalizados.",
-  },
-  {
-    title: "Eventos, Ferias y Festivales",
-    description: "Diseño, gestión y producción de eventos públicos, privados, comunitarios y corporativos.",
-  },
-  {
-    title: "Relaciones Públicas y Auspicios",
-    description: "Gestión de patrocinadores, alianzas estratégicas, vinculación institucional y desarrollo de redes.",
-  },
-  {
-    title: "Marketing Territorial",
-    description: "Posicionamiento de destinos, campañas locales, contenidos, activaciones y comunicación de marca.",
-  },
+  { title: "Eventos y Producción", description: "Diseño, organización y coordinación de eventos culturales, deportivos, corporativos, ferias y activaciones." },
+  { title: "Obras y Habilitación de Espacios", description: "Evaluación y coordinación de obras, remodelaciones, habilitaciones y montajes de infraestructura según el alcance de cada proyecto." },
+  { title: "Audiovisual y Contenidos", description: "Producción audiovisual, fotografía y contenidos digitales para proyectos, experiencias y comunicación de marca." },
+  { title: "Turismo y Experiencias", description: "Diseño y coordinación de rutas, actividades culturales y experiencias territoriales con operadores y colaboradores según cada encargo." },
+  { title: "Logística y Equipamiento", description: "Coordinación de proveedores, montajes, traslados y requerimientos de equipos e infraestructura para la operación de proyectos." },
+  { title: "Vinculación y Gestión de Proyectos", description: "Articulación de redes, relaciones públicas, alianzas y auspicios, con organización de antecedentes y seguimiento de iniciativas." },
 ];
 
 const platformFlow = ["Personas", "Redes", "Oportunidades", "Proyectos", "Experiencias", "Desarrollo Territorial"];
@@ -51,7 +40,7 @@ const platformCards = [
   },
   {
     title: "Impacto Territorial",
-    description: "Resultados visibles para el desarrollo local, la identidad regional y nuevas economías colaborativas.",
+    description: "Aportes buscados al desarrollo local, la identidad regional y la colaboración entre actores del territorio.",
   },
 ];
 
@@ -66,7 +55,7 @@ const humanCapitalCards = [
   },
   {
     title: "Marca Personal",
-    points: ["Redes sociales", "Creación de contenido", "Posicionamiento profesional", "Embajadores THAKHI"],
+    points: ["Redes sociales", "Creación de contenido", "Posicionamiento profesional", "Embajadores THAKI"],
   },
   {
     title: "Generación de Oportunidades",
@@ -157,7 +146,7 @@ export default function HomePage() {
       <section className="relative min-h-screen overflow-hidden bg-[#071b2a] text-white">
         <Image
           src="/thakhi-hero-tarapaca.png"
-          alt="Costa, desierto y cultura nortina en Tarapacá"
+          alt="Imagen conceptual de costa y desierto del norte de Chile"
           fill
           priority
           sizes="100vw"
@@ -166,13 +155,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,27,42,0.93)_0%,rgba(7,27,42,0.72)_48%,rgba(7,27,42,0.22)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,27,42,0.18)_0%,rgba(7,27,42,0)_42%,rgba(7,27,42,0.82)_100%)]" />
 
+        <p className="absolute bottom-5 right-5 z-10 text-[10px] tracking-wide text-white/60">Imagen conceptual del norte de Chile</p>
         <header className="relative z-20 border-b border-white/10 bg-[#071b2a]/50 backdrop-blur-xl">
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-5 px-5 py-4 md:px-8">
-            <Link href="/" className="flex items-center gap-3" aria-label="THAKHI inicio">
+            <Link href="/" className="flex items-center gap-3" aria-label="THAKI inicio">
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/12 text-sm font-bold tracking-[0.18em]">
                 TH
               </span>
-              <span className="text-lg font-semibold tracking-[0.2em]">THAKHI</span>
+              <span className="text-lg font-semibold tracking-[0.2em]">THAKI</span>
             </Link>
             <nav className="hidden items-center gap-7 lg:flex">
               {navItems.map((item) => (
@@ -192,29 +182,29 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] w-full max-w-7xl items-center px-5 pb-20 pt-16 md:px-8">
           <div className="max-w-4xl space-y-8">
-            <p className="text-xs font-bold uppercase tracking-[0.34em] text-[#e6b36f]">Iquique · Región de Tarapacá</p>
+            <p className="text-xs font-bold uppercase tracking-[0.34em] text-[#e6b36f]">Antofagasta · Región de Antofagasta</p>
             <div className="space-y-5">
-              <h1 className="text-6xl font-semibold tracking-[0.02em] md:text-8xl lg:text-9xl">THAKHI</h1>
+              <h1 className="text-6xl font-semibold tracking-[0.02em] md:text-8xl lg:text-9xl">THAKI</h1>
               <p className="max-w-3xl text-2xl font-medium leading-tight text-white/92 md:text-4xl">
-                Plataforma de articulación territorial y generación de experiencias en Tarapacá.
+                Plataforma de articulación territorial, proyectos y experiencias en Antofagasta.
               </p>
             </div>
             <p className="max-w-2xl text-base leading-8 text-white/76 md:text-xl">
-              Conectamos personas, empresas, instituciones y territorio para crear experiencias turísticas, eventos,
-              ferias, festivales y activaciones con identidad local.
+              Conectamos personas, empresas, instituciones y capacidades técnicas para transformar oportunidades
+              en proyectos, eventos y experiencias con identidad territorial.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="#contacto" className="rounded-full bg-[#e6b36f] px-7 py-4 text-sm font-bold text-[#071b2a] shadow-[0_18px_48px_rgba(230,179,111,0.28)] hover:bg-[#f0c98c]">
                 Conversemos
               </Link>
-              <Link href="#lineas" className="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur hover:bg-white/16">
-                Ver líneas de trabajo
+              <Link href="#plataforma" className="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur hover:bg-white/16">
+                Conocer la plataforma
               </Link>
               <Link href="/encuesta" className="rounded-full border border-[#e6b36f]/60 bg-[#e6b36f]/14 px-7 py-4 text-sm font-bold text-[#f0c98c] backdrop-blur hover:bg-[#e6b36f]/22">
                 Completar Encuesta
               </Link>
-              <Link href="/agentes-instagram" className="rounded-full border border-white/20 bg-white/8 px-7 py-4 text-sm font-bold text-white/88 backdrop-blur hover:bg-white/14">
-                Agentes de Instagram
+              <Link href="/tarapaca" className="rounded-full border border-white/20 bg-white/8 px-7 py-4 text-sm font-bold text-white/88 backdrop-blur hover:bg-white/14">
+                Antecedente Tarapacá
               </Link>
             </div>
           </div>
@@ -224,12 +214,12 @@ export default function HomePage() {
       <section id="que-es" className="relative px-5 py-20 md:px-8 md:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(213,125,64,0.22),transparent_34%),linear-gradient(135deg,#f7efe2_0%,#fffaf2_55%,#d9edf4_100%)]" />
         <div className="relative mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-          <SectionIntro eyebrow="Qué es THAKHI" title="Relaciones, territorio y experiencia convertidos en oportunidades reales." />
+          <SectionIntro eyebrow="Qué es THAKI" title="Personas, capacidades y territorio conectados para desarrollar proyectos." />
           <div className="rounded-[28px] border border-[#d8c8b2] bg-white/76 p-8 shadow-[0_28px_90px_rgba(61,44,29,0.12)] backdrop-blur md:p-10">
             <p className="text-lg leading-9 text-[#485459] md:text-xl">
-              THAKHI nace para articular oportunidades en Iquique y Tarapacá, integrando relaciones públicas, turismo,
-              producción de eventos, cultura local y desarrollo comercial. Nuestro principal activo es el capital humano:
-              personas capaces de abrir puertas, conectar redes y transformar ideas en experiencias reales.
+              THAKI es una plataforma de articulación territorial con foco en Antofagasta. Su propósito es conectar
+              personas, organizaciones, empresas y capacidades que puedan colaborar. Los eventos, las obras y
+              habilitaciones, el audiovisual, el turismo y la logística son líneas de acción dentro de esa plataforma.
             </p>
           </div>
         </div>
@@ -241,7 +231,7 @@ export default function HomePage() {
             <SectionIntro
               eyebrow="Qué es una plataforma"
               title="¿Qué significa ser una plataforma?"
-              description="THAKHI no se limita a prestar servicios. Conecta personas, organizaciones, empresas, instituciones y oportunidades para transformar capacidades en experiencias, proyectos y desarrollo territorial."
+              description="THAKI conecta personas, organizaciones, empresas e instituciones. La plataforma reúne capacidades y oportunidades para diseñar colaboraciones, experiencias y proyectos con alcance definido."
               light
             />
             <div className="rounded-[32px] border border-white/12 bg-white/8 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.2)] backdrop-blur md:p-10">
@@ -282,8 +272,8 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-7xl space-y-12">
           <SectionIntro
             eyebrow="Líneas de trabajo"
-            title="Cuatro frentes para activar presencia, comunidad y valor territorial."
-            description="Cada línea combina lectura local, gestión de redes y ejecución para que las ideas puedan vivir en terreno."
+            title="Seis líneas de acción para conectar capacidades y oportunidades."
+            description="Definimos el alcance, los recursos y las coordinaciones de cada iniciativa antes de proponer su desarrollo."
           />
           <div className="grid gap-5 md:grid-cols-2">
             {workLines.map((line, index) => (
@@ -297,6 +287,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="colaboracion-na" className="bg-[#10202c] px-5 py-16 text-white md:px-8 md:py-20">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-2 lg:items-center">
+          <SectionIntro eyebrow="Colaboración estratégica" title="NorthAcoustics · NA" light />
+          <div className="space-y-5 text-lg leading-9 text-white/76">
+            <p>NorthAcoustics es un colaborador estratégico independiente para evaluar requerimientos de acústica, sonido y apoyo técnico en proyectos.</p>
+            <p>El alcance y la participación de cada parte se definen para cada encargo.</p>
+            <Link href="#contacto" className="inline-block text-sm font-bold text-[#f0c98c] underline underline-offset-4">Consultar por una colaboración técnica ↗</Link>
+          </div>
+        </div>
+      </section>
+
       <section id="capital-humano" className="relative bg-[#f7efe2] px-5 py-20 md:px-8 md:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.28),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(18,52,71,0.16),transparent_34%)]" />
         <div className="relative mx-auto w-full max-w-7xl space-y-14">
@@ -304,7 +305,7 @@ export default function HomePage() {
             <SectionIntro
               eyebrow="Capital Humano y Desarrollo de Talento"
               title="Nuestro principal activo son las personas."
-              description="THAKHI nace con la convicción de que el desarrollo territorial se construye desde las personas, sus capacidades, sus redes de contacto y su capacidad de generar confianza."
+              description="THAKI nace con la convicción de que el desarrollo territorial se construye desde las personas, sus capacidades, sus redes de contacto y su capacidad de generar confianza."
             />
             <div className="rounded-[32px] border border-[#d8c8b2] bg-white/78 p-8 shadow-[0_28px_90px_rgba(61,44,29,0.12)] backdrop-blur md:p-10">
               <p className="text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#10202c] md:text-3xl">
@@ -394,7 +395,7 @@ export default function HomePage() {
                 "Sectores donde posee contactos",
                 "Áreas de interés",
                 "Habilidades destacadas",
-                "Objetivos personales dentro de THAKHI",
+                "Objetivos personales dentro de THAKI",
               ].map((label) => (
                 <label key={label} className={label.includes("Objetivos") ? "md:col-span-2" : ""}>
                   <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#b9783f]">{label}</span>
@@ -419,7 +420,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Responsabilidades clave"
             title="Responsabilidades Clave para el Desarrollo del Proyecto"
-            description="THAKHI se construye desde el capital humano, pero no desde cargos rígidos. El proyecto requiere responsabilidades claras, flexibles y colaborativas, que podrán ser asumidas y redistribuidas por el equipo según capacidades, disponibilidad y resultados."
+            description="THAKI se construye desde el capital humano, pero no desde cargos rígidos. El proyecto requiere responsabilidades claras, flexibles y colaborativas, que podrán ser asumidas y redistribuidas por el equipo según capacidades, disponibilidad y resultados."
             light
           />
 
@@ -477,11 +478,11 @@ export default function HomePage() {
           <div className="relative overflow-hidden rounded-[32px] bg-[#8f4f2c] p-8 text-white shadow-[0_32px_110px_rgba(61,44,29,0.24)] md:p-12">
             <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(7,27,42,0.38),rgba(143,79,44,0.24)),radial-gradient(circle_at_top_right,rgba(230,179,111,0.35),transparent_34%)]" />
             <div className="relative max-w-4xl space-y-5">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Objetivo 90 días</p>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Primera etapa · Antofagasta</p>
               <p className="text-2xl font-medium leading-tight md:text-4xl">
-                En los primeros 90 días THAKHI busca instalar presencia comercial en Iquique, levantar alianzas
-                estratégicas, activar una agenda de eventos y turismo, y comenzar a generar ingresos mediante
-                experiencias, auspicios y servicios de producción.
+                La primera etapa en Antofagasta busca identificar requerimientos concretos, definir servicios
+                ejecutables y preparar propuestas con alcance, recursos y costos claros. El foco es validar
+                oportunidades mediante encargos y colaboraciones acordados para cada proyecto.
               </p>
             </div>
           </div>
@@ -492,24 +493,24 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.22),transparent_32%),linear-gradient(135deg,#071b2a_0%,#123447_58%,#8f4f2c_100%)]" />
         <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl space-y-5">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Activemos Tarapacá</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f0c98c]">Desarrollemos proyectos en Antofagasta</p>
             <h2 className="text-4xl font-semibold tracking-[-0.04em] md:text-6xl">
               Construyamos experiencias con identidad territorial.
             </h2>
             <p className="max-w-2xl text-base leading-8 text-white/76 md:text-lg">
               Si eres empresa, institución, emprendedor, operador turístico o marca interesada en activar presencia en
-              Tarapacá, THAKHI puede ayudarte a conectar con el territorio.
+              Antofagasta, conversemos sobre el alcance y las coordinaciones que necesita tu proyecto.
             </p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
             <Link href="mailto:contacto@thakhi.cl" className="inline-flex justify-center rounded-full bg-[#e6b36f] px-8 py-4 text-sm font-bold text-[#071b2a] shadow-[0_18px_48px_rgba(230,179,111,0.28)] hover:bg-[#f0c98c]">
-              Contactar a THAKHI
+              Contactar a THAKI
             </Link>
             <Link href="/encuesta" className="inline-flex justify-center rounded-full border border-white/16 bg-white/8 px-8 py-4 text-sm font-bold text-white hover:bg-white/14">
               Completar Encuesta
             </Link>
-            <Link href="/agentes-instagram" className="inline-flex justify-center rounded-full border border-[#e6b36f]/40 bg-[#e6b36f]/12 px-8 py-4 text-sm font-bold text-[#f0c98c] hover:bg-[#e6b36f]/18">
-              Agentes de Instagram
+            <Link href="/tarapaca" className="inline-flex justify-center rounded-full border border-[#e6b36f]/40 bg-[#e6b36f]/12 px-8 py-4 text-sm font-bold text-[#f0c98c] hover:bg-[#e6b36f]/18">
+              Antecedente Tarapacá
             </Link>
           </div>
         </div>

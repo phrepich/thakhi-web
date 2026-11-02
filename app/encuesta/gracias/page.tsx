@@ -9,11 +9,11 @@ export default function SurveyThanksPage() {
         <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] md:text-7xl">Gracias.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-white/74 md:text-xl">
           Tu información ayudará a identificar capacidades, redes y oportunidades para fortalecer el desarrollo interno de
-          THAKHI.
+          THAKI.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link href="/" className="rounded-full bg-[#e6b36f] px-7 py-4 text-sm font-bold text-[#071b2a] hover:bg-[#f0c98c]">
-            Volver a THAKHI
+            Volver a THAKI
           </Link>
           <Link href="/agentes-instagram" className="rounded-full border border-white/16 bg-white/8 px-7 py-4 text-sm font-bold text-white hover:bg-white/14">
             Ver agentes territoriales

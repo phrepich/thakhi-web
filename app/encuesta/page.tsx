@@ -78,11 +78,11 @@ export default function SurveyPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.26),transparent_32%),linear-gradient(135deg,#071b2a_0%,#123447_62%,#8f4f2c_100%)]" />
         <div className="relative mx-auto w-full max-w-7xl">
           <nav className="flex items-center justify-between gap-5">
-            <Link href="/" className="flex items-center gap-3" aria-label="Volver a THAKHI">
+            <Link href="/" className="flex items-center gap-3" aria-label="Volver a THAKI">
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/12 text-sm font-bold tracking-[0.18em]">
                 TH
               </span>
-              <span className="text-lg font-semibold tracking-[0.2em]">THAKHI</span>
+              <span className="text-lg font-semibold tracking-[0.2em]">THAKI</span>
             </Link>
             <Link href="/agentes-instagram" className="rounded-full border border-white/16 bg-white/8 px-5 py-3 text-sm font-bold text-white hover:bg-white/14">
               Agentes de Instagram
@@ -92,10 +92,10 @@ export default function SurveyPage() {
           <div className="max-w-4xl py-16 md:py-24">
             <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#f0c98c]">Diagnóstico de capacidades</p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
-              Encuesta THAKHI
+              Encuesta THAKI
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-white/76 md:text-2xl">
-              Levantamos capacidades, redes de contacto e intereses para construir equipos de alto impacto territorial.
+              Levantamos capacidades, redes de contacto e intereses para desarrollar proyectos con foco en Antofagasta.
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function SurveyPage() {
           action="https://formsubmit.co/phrepich@gmail.com"
           className="mx-auto grid w-full max-w-5xl gap-8"
         >
-          <input type="hidden" name="_subject" value="Nueva encuesta THAKHI" />
+          <input type="hidden" name="_subject" value="Nueva encuesta THAKI · Antofagasta" />
           <input type="hidden" name="_next" value="https://thakhi-tarapaca.netlify.app/encuesta/gracias" />
           <input type="hidden" name="_captcha" value="false" />
 
@@ -166,9 +166,9 @@ export default function SurveyPage() {
             <div className="mt-6 grid gap-5">
               {[
                 ["experiencia_relevante", "Describe tu experiencia más relevante."],
-                ["desarrollo_thakhi", "¿Qué te gustaría desarrollar en THAKHI?"],
+                ["desarrollo_thakhi", "¿Qué te gustaría desarrollar en THAKI?"],
                 ["redes_aporte", "¿Qué contactos o redes puedes aportar?"],
-                ["oportunidades", "¿Qué oportunidades observas para THAKHI?"],
+                ["oportunidades", "¿Qué oportunidades observas para THAKI?"],
                 ["observaciones", "Observaciones adicionales."],
               ].map(([name, label]) => (
                 <label key={name}>
@@ -186,7 +186,7 @@ export default function SurveyPage() {
           <div className="flex flex-col gap-4 rounded-[32px] bg-[#10202c] p-6 text-white md:flex-row md:items-center md:justify-between md:p-8">
             <p className="max-w-2xl text-sm leading-7 text-white/72">
               Las respuestas permitirán identificar fortalezas, redes y oportunidades para desarrollar roles, liderazgo y
-              proyectos dentro de THAKHI.
+              proyectos dentro de THAKI.
             </p>
             <button type="submit" className="rounded-full bg-[#e6b36f] px-8 py-4 text-sm font-bold text-[#071b2a] hover:bg-[#f0c98c]">
               Enviar encuesta

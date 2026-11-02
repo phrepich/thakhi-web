@@ -1,13 +1,23 @@
-# THAKHI Landing
+# THAKI · Antofagasta
 
-Landing page independiente para THAKHI, construida con Next.js, TypeScript y Tailwind CSS.
+Sitio original construido con Next.js, TypeScript y Tailwind CSS.
 
-## Comandos
+- `/`: plataforma actual en Antofagasta: eventos, obras y habilitación de espacios, audiovisual, turismo, logística y vinculación.
+- `/tarapaca`: antecedente separado de la propuesta exploratoria de Iquique y Tarapacá.
+- `/agentes-instagram`: modelo histórico de agentes de la etapa Tarapacá.
+- `/encuesta`: diagnóstico de capacidades, con enfoque en Antofagasta.
 
-```bash
-npm install
-npm run dev
+NorthAcoustics se presenta como colaborador estratégico independiente, con alcance definido para cada encargo.
+
+El documento societario utilizado para orientar el contenido está marcado como borrador; el sitio no acredita constitución ni habilitaciones regulatorias.
+
+## Desarrollo y validación
+
+```sh
+npm ci
 npm run build
+npm run typecheck
+npm run start
 ```
 
-La pagina principal esta en `app/page.tsx` y el asset del hero esta en `public/thakhi-hero-tarapaca.png`.
+Se mantiene la dirección de Netlify existente y el destino de la encuesta. La imagen del hero es conceptual del norte de Chile; no se presenta como fotografía documental de Antofagasta.

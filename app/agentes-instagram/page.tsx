@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "THAKI Tarapacá | Modelo de agentes territoriales",
+  description: "Modelo exploratorio de agentes territoriales planteado para la propuesta THAKI Tarapacá.",
+};
 
 const agents = [
   {
@@ -50,11 +56,11 @@ export default function InstagramAgentsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(230,179,111,0.26),transparent_32%),linear-gradient(135deg,#071b2a_0%,#123447_62%,#8f4f2c_100%)]" />
         <div className="relative mx-auto w-full max-w-7xl">
           <nav className="flex items-center justify-between gap-5">
-            <Link href="/" className="flex items-center gap-3" aria-label="Volver a THAKHI">
+            <Link href="/tarapaca" className="flex items-center gap-3" aria-label="Volver al antecedente THAKI Tarapacá">
               <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/12 text-sm font-bold tracking-[0.18em]">
                 TH
               </span>
-              <span className="text-lg font-semibold tracking-[0.2em]">THAKHI</span>
+              <span className="text-lg font-semibold tracking-[0.2em]">THAKI</span>
             </Link>
             <Link href="/encuesta" className="rounded-full bg-[#e6b36f] px-5 py-3 text-sm font-bold text-[#071b2a] hover:bg-[#f0c98c]">
               Completar Encuesta
@@ -62,12 +68,12 @@ export default function InstagramAgentsPage() {
           </nav>
 
           <div className="max-w-4xl py-20 md:py-28">
-            <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#f0c98c]">Capital humano y marca personal</p>
+            <p className="text-xs font-bold uppercase tracking-[0.32em] text-[#f0c98c]">Antecedente Tarapacá · Modelo propuesto</p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
               Agentes Territoriales de Instagram
             </h1>
             <p className="mt-6 max-w-2xl text-xl leading-9 text-white/76 md:text-2xl">
-              Personas que conectan territorio, experiencias y oportunidades.
+              Modelo exploratorio de agentes territoriales planteado para THAKI Tarapacá.
             </p>
           </div>
         </div>
@@ -78,10 +84,10 @@ export default function InstagramAgentsPage() {
           <div className="max-w-3xl space-y-4">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#b9783f]">Modelo digital territorial</p>
             <h2 className="text-3xl font-semibold tracking-[-0.04em] md:text-5xl">
-              THAKHI desarrolla referentes humanos, no solo canales de comunicación.
+              Una propuesta de referentes humanos para la etapa Tarapacá.
             </h2>
             <p className="text-base leading-8 text-[#5f6b70] md:text-lg">
-              Lucas y Virna representan dos formas complementarias de activar confianza: la experiencia vivida en el
+              En la propuesta original, Lucas y Virna representaban dos formas de vinculación: la experiencia vivida en el
               territorio y la construcción de redes que abren oportunidades.
             </p>
           </div>

@@ -4,9 +4,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "THAKHI | Experiencias territoriales en Tarapacá",
+  title: "THAKI | Plataforma territorial de proyectos y experiencias en Antofagasta",
   description:
-    "Plataforma de articulación territorial y generación de experiencias en Iquique y la Región de Tarapacá.",
+    "Plataforma de articulación territorial en Antofagasta: conecta personas, organizaciones y capacidades para desarrollar proyectos, eventos y experiencias.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
